@@ -1,5 +1,12 @@
 /* Variables
 ---------------------------------------------------------------------- */
+:root {
+  --primary: #DDD;
+  --dark: #333;
+  --light: #FAFAFA;
+  --background: #CCC;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
 
 
 
@@ -12,12 +19,20 @@
 }
 
 html {
-  /* background-color: ; */
-  /* color: ; */
-  /* font-family: ; */
+  color: var(--dark);
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  line-height: 140%;
   font-weight: 500;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
+}
+
+
+
+/* Global
+---------------------------------------------------------------------- */
+body {
+  background-color: var(--background);
+  margin: 2rem 4rem;
+  line-height: 1.4;
 }
