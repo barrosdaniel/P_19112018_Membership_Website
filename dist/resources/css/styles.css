@@ -1,11 +1,15 @@
 /* Variables
 ---------------------------------------------------------------------- */
 :root {
+  /* colours */
   --primary: #DDD;
   --dark: #333;
   --light: #FAFAFA;
   --background: #CCC;
+  --highlight: #2195F2;
   --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  /* Other */
+  --transition-time: 0.4s;
 }
 
 
@@ -66,6 +70,10 @@ img {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.main-nav li {
+  box-shadow: var(--shadow);
+}
+
 .main-nav a:link,
 .main-nav a:visited {
   display: block;
@@ -76,7 +84,7 @@ img {
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  transition: 0.3s;
+  transition: var(--transition-time);
 }
 
 .main-nav a:hover,
@@ -89,3 +97,76 @@ img {
 
 /* Top Container
 ---------------------------------------------------------------------- */
+.top-container {
+  display: grid;
+  grid-gap: 1.25rem;
+  grid-template-areas:
+    'showcase showcase top-box-a'
+    'showcase showcase top-box-b'
+}
+
+.showcase {
+  grid-area: showcase;
+  min-height: 25rem;
+  padding: 3rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/showcase.jpg);
+  color: var(--light);
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow);
+  /* Inner arrangement */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.showcase h1 {
+  margin: 0 0 1.5rem 0;
+  font-size: 3.5rem;
+}
+
+.showcase h2 {
+  margin: 0 0 0.4rem 0;
+  font-size: 2.5rem;
+}
+
+.showcase p {
+  margin: 0 0 2rem 0;
+}
+
+.showcase a:link,
+.showcase a:visited {
+  background-color: var(--highlight);
+  color: var(--light);
+  font-weight: 700;
+  transition: var(--transition-time);
+}
+
+.showcase a:hover,
+.showcase a:active {
+  background-color: var(--light);
+  color: var(--dark);
+  font-weight: 700;
+}
+
+.top-box {
+  background-color: var(--primary);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.top-box .price {
+  font-size: 2rem;
+}
+
+.top-box-a {
+  grid-area: top-box-a;
+}
+
+.top-box-b {
+  grid-area: top-box-b;
+}
