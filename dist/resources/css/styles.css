@@ -32,7 +32,60 @@ html {
 /* Global
 ---------------------------------------------------------------------- */
 body {
-  background-color: var(--background);
   margin: 2rem 4rem;
+  background-color: var(--background);
   line-height: 1.4;
 }
+
+.button {
+  border: 0;
+  padding: 0.6rem 1.3rem;
+  background-color: var(--dark);
+  color: var(--light);
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 1.25rem;
+}
+
+
+
+/* Navigation
+---------------------------------------------------------------------- */
+.main-nav ul {
+  display: grid;
+  grid-gap: 1.25rem;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.main-nav a:link,
+.main-nav a:visited {
+  display: block;
+  padding: 0.8rem;
+  background-color: var(--primary);
+  color: var(--dark);
+  font-size: 1.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a:active {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+
+
+/* Top Container
+---------------------------------------------------------------------- */
