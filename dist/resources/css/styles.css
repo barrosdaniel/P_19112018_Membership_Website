@@ -246,14 +246,72 @@ img {
 .portfolio img {
   width: 100%;
   box-shadow: var(--shadow);
+  transition: var(--transition-time);
+}
+
+.portfolio img:hover {
+transform: scale(1.05);
 }
 
 
-
-/* Portfolio section
+/* Footer
 ---------------------------------------------------------------------- */
 footer {
   margin-top: 2rem;
   text-align: center;
   font-size: 0.9rem;
+}
+
+
+
+/* Responsive layouts
+---------------------------------------------------------------------- */
+@media(max-width: 700px) {  
+  body {
+    margin: 1rem 2rem;
+  }
+  
+  .top-container {
+    grid-template-areas: 
+      'showcase showcase'
+      'top-box-a top-box-b';
+  }
+  
+  .showcase h1 {
+    font-size: 2.5rem;
+  }
+
+  .showcase h2 {
+    font-size: 2rem;
+  }
+  
+  .main-nav ul {
+    grid-template-columns: 1fr;
+  }
+  
+  .info {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+  
+}
+
+
+
+@media(max-width: 500px) {
+  body {
+    margin: 0.5rem 0.5rem;
+  }
+  
+  .top-container {
+    grid-template-areas: 
+      'showcase'
+      'showcase'
+      'top-box-a'
+      'top-box-b';
+  }
+
+  .portfolio img:hover {
+    transform: none;
+  }
 }
